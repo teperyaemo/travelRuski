@@ -9,8 +9,14 @@
       Title="addEditPage">
     <Page.Resources>
         <Style TargetType="TextBox">
-            <Setter Property="Margin" Value="40,40,40,20"/>
+            <Setter Property="Margin" Value="40,20,40,20"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="40,20,40,20"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </Page.Resources>
     <Grid>
@@ -20,13 +26,17 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox />
-        <TextBox Grid.Row="1"/>
-        <TextBox Grid.Row="2"/>
-        <Button Content="Сохранить" x:Name="saveBtn" Grid.Row="3" Margin="40,20,40,20" FontSize="20" FontFamily="Comic Sans MS" Click="saveBtn_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="40,24,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="40,19,0,0" TextWrapping="Wrap" Text="Стоимость за сутки" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="40,24,0,0" TextWrapping="Wrap" Text="Количество звезд" VerticalAlignment="Top" Grid.Row="2"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Название"/>
+        <TextBlock Text="Количество звёзд" Grid.Row="1"/>
+        <TextBlock Text="Страна" Grid.Row="2"/>
+        <TextBox Text="{Binding Name}" Grid.Column="1" />
+        <TextBox Text="{Binding CountOfStars}" Grid.Column="1" Grid.Row="1"/>
+        <ComboBox Name="CountryCB" SelectedItem="{Binding Country}" DisplayMemberPath="Name" Grid.Column="1" Grid.Row="2" Margin="40,20,40,20"/>
+        <Button Content="Сохранить" x:Name="saveBtn" Grid.Row="3" Grid.ColumnSpan="2" Margin="40,20,40,20" FontSize="20" FontFamily="Comic Sans MS" Click="saveBtn_Click"/>
 
     </Grid>
 </Page>

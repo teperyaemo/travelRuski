@@ -6,38 +6,32 @@
       xmlns:local="clr-namespace:travelRuski"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="hotelPage">
+      Title="hotelPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="True" IsReadOnly="True">
+        <DataGrid x:Name="HotelsDbGrid" IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Width="200"/>
-                <DataGridTextColumn Header="Стоимость за сутки" Width="200"/>
-                <DataGridTextColumn Header="Количестов звезд" Width="100"/>
-                <DataGridTemplateColumn Width="140">
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="auto"/>
+                <DataGridTextColumn Header="Количестов звезд" Binding="{Binding CountOfStars}" Width="auto"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Country.Name}" Width="auto"/>
+                <DataGridTextColumn Header="Количество туров" Binding="{Binding HotelOfTour.TourId}" Width="auto"/>
+                <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Редактировать" Name="editBtn" Click="editBtn_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="140">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button x:Name="delBtn" Content="Удалить" Click="delBtn_Click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+
             </DataGrid.Columns>
-            <Button></Button>
-            <Button></Button>
         </DataGrid>
         <Grid Background="#000000" Grid.Row="1"/>
         <Button x:Name="addBtn" Content="Добавить" Grid.Row="1" Width="90" HorizontalAlignment="Right" Margin="25,5,25,5" Click="addBtn_Click"/>
-        
+        <Button x:Name="delBtn" Content="Удалить" Grid.Row="1" Width="90" HorizontalAlignment="Left" Margin="25,5,25,5" Click="delBtn_Click"/>
+
     </Grid>
 </Page>

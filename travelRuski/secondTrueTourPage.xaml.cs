@@ -16,14 +16,20 @@ using System.Windows.Shapes;
 namespace travelRuski
 {
     /// <summary>
-    /// Логика взаимодействия для trueTourPage.xaml
+    /// Логика взаимодействия для secondTrueTourPage.xaml
     /// </summary>
-    public partial class trueTourPage : Page
+    public partial class secondTrueTourPage : Page
     {
-        public trueTourPage()
+        public secondTrueTourPage()
         {
             InitializeComponent();
+            var currentTours = Entities.GetContext().Tour.ToList();
+            LVTour.ItemsSource = currentTours;
         }
 
+        private void LVTour_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

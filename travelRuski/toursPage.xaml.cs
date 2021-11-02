@@ -27,7 +27,7 @@ namespace travelRuski
 
         private void toursBtn_Click(object sender, RoutedEventArgs e)
         {
-            Manager.mainFrame.Navigate(new trueTourPage());
+            Manager.mainFrame.Navigate(new secondTrueTourPage());
         }
 
         private void hotelsBtn_Click(object sender, RoutedEventArgs e)
