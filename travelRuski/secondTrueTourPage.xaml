@@ -11,8 +11,21 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="380"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите название для поиска: " Width="175" TextAlignment="Right"/>
+                <TextBox x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged" Width="225"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Выберите тип:" Width="175" TextAlignment="Right"/>
+                <ComboBox Width="225" Name="Combotype" SelectionChanged="Combotype_SelectionChanged" DisplayMemberPath="Name"/>
+            </StackPanel>
+            <CheckBox Content="Показывать только актуальное" Name="CheckActual" Checked="CheckActual_Checked" Unchecked="CheckActual_Unchecked"/>
+        </WrapPanel>
+        
         <ListView Grid.Row="1" Name="LVTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" SelectionChanged="LVTour_SelectionChanged">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
