@@ -43,17 +43,17 @@
                         </Grid.RowDefinitions>
                         <Image Width="auto" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5">
                             <Image.Source>
-                                <Binding Path="ImagePreview">
-                                    <!--<Binding.TargetNullValue>
+                                <Binding Path="ImgPath">
+                                    <Binding.FallbackValue>
                                         <ImageSource>Resources/picture.png</ImageSource>
-                                    </Binding.TargetNullValue>-->
+                                    </Binding.FallbackValue>
                                 </Binding>
                             </Image.Source>
                         </Image>
                         <TextBlock Text="{Binding Name}" VerticalAlignment="Top" TextAlignment="Center" Width="390" TextWrapping="Wrap" HorizontalAlignment="Center"  Margin="5,5" FontSize="26" Grid.Row="0"/>
                         <TextBlock Text="{Binding Price, StringFormat= {}{0:N2} РУБ}" Grid.Row="2" Margin="5,5,5,15" HorizontalAlignment="Center" FontSize="10" FontWeight="Bold"/>
                         <TextBlock Text="{Binding TicketCount, StringFormat={} Билетов осталось: {0}}" Grid.Row="3" FontSize="9" HorizontalAlignment="Right"/>
-                        <TextBlock Text="{Binding actualText}" Grid.Row="3" FontSize="9" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding actualText}" Foreground="{Binding colorBrush}" Grid.Row="3" FontSize="9" HorizontalAlignment="Left" Name="TBActual"/>
                     </Grid>
 
                 </DataTemplate>

@@ -11,6 +11,7 @@ namespace travelRuski
 {
     using System;
     using System.Collections.Generic;
+    using System.Windows.Media;
     
     public partial class Tour
     {
@@ -41,7 +42,22 @@ namespace travelRuski
             }
              
         }
-    
+
+        public SolidColorBrush colorBrush
+        {
+            get
+            {
+                return (IsActual) ? Brushes.Green : Brushes.Red;
+            }
+        }
+        
+        public string ImgPath
+        {
+            get
+            {
+                return "/Resources/" + this.Name + ".jpg";
+            }
+        }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hotel> Hotel { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

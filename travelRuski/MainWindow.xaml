@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:travelRuski"
         mc:Ignorable="d"
-        Title="Путешествуй по России" Background="#878787" Height="450" Width="820" MinHeight="500" MinWidth="800">
+        Title="Путешествуй по России" Background="#878787" Height="450" Width="820" MinHeight="500" MinWidth="800" Icon="/Resources/unknown.ico">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>

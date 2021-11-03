@@ -172,9 +172,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -186,6 +184,30 @@
       <DependentUpon>DB.edmx</DependentUpon>
       <LastGenOutput>DB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Болгарское наследие.jpg" />
+    <Resource Include="Resources\Волшебный Восток.jpg" />
+    <Resource Include="Resources\Город с большими амбициями.jpg" />
+    <Resource Include="Resources\Город четырех ворот.jpg" />
+    <Resource Include="Resources\Древний Минск.jpg" />
+    <Resource Include="Resources\Жемчужина Татарстана.jpg" />
+    <Resource Include="Resources\Знакомьтесь, Амстердам!.jpg" />
+    <Resource Include="Resources\Из Алании к загадочным пещерам Алтынбешик.jpg" />
+    <Resource Include="Resources\Многоликий Сувон.jpg" />
+    <Resource Include="Resources\Москва поэтическая.jpg" />
+    <Resource Include="Resources\Незабываемый Дели.jpg" />
+    <Resource Include="Resources\По старому Таллину.jpg" />
+    <Resource Include="Resources\Романтика белых ночей и разводных мостов.jpg" />
+    <Resource Include="Resources\Свидание с Хельсинки.jpg" />
+    <Resource Include="Resources\Сердце Ирана.jpg" />
+    <Resource Include="Resources\Сердце Северной Карелии.jpg" />
+    <Resource Include="Resources\Старый город.jpg" />
+    <Resource Include="Resources\Столица страны Утренней Свежести.jpg" />
+    <Resource Include="Resources\Страна идеальной гармонии.jpg" />
+    <Resource Include="Resources\Урбанистическая Бразилия.jpg" />
+    <Resource Include="Resources\Финская крепость.jpg" />
+    <Resource Include="Resources\Финский романтизм.jpg" />
+    <Resource Include="Resources\picture.png" />
+    <Resource Include="Resources\unknown.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
